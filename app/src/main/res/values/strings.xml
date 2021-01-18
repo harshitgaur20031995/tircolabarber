@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Triola Barber Hair Style</string>
+    <string name="todo">TODO</string>
+    <string name="i_triola_hair_style">I Triola Hair Style</string>
+    <string name="crea_account">Crea Account</string>
+    <string name="nome_cliente">Nome Cliente</string>
+    <string name="email">Email</string>
+    <string name="gi_registrato_accedi_ora">Già Registrato? Accedi Ora</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Il nostro salone non è un semplice salone da barba e taglio del capello, ma è un piccolo centro benessere al maschile.
+        Quando il cliente viene da noi, viene curato a 360°, ci prendiamo cura della cute così come anche del ph del viso,non solo barba, ma anche capelli quindi,
+        con tagli innovativi, curati e alla moda ,che renderanno lappuntamento dal barbiere sempre più confortevole.
+        Il nostro salone è soprattutto un luogo dove la linea, la qualità, lo stile taglio uomo e la rasatura della barba fanno da padroni. Un negozio in cui è possibile trovare prodotti di alta qualità testati e riconosciuti, che garantiscono trattamenti efficaci e duraturi.</string>
+
+    <string-array name="quantity_string_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5(Max)</item>
+
+    </string-array>
+</resources>

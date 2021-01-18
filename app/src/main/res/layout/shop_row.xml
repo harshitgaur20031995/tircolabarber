@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.triolabarberhairstyle.models.Product" />
+
+        <variable
+            name="shopInterface"
+            type="com.example.triolabarberhairstyle.adapters.ShopListAdapter.ShopInterface" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{() -> shopInterface.onItemClick(product)}">
+
+        <ImageView
+            android:id="@+id/prodottoShampoo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/shampoo_black"
+            android:productImage="@{product.imageUrl}"/>
+
+        <TextView
+            android:id="@+id/nomeprodotto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="@{product.name}"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/prezzoprodotto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/aclonica"
+            android:text="@{String.valueOf(product.price) + '€'}" />
+
+        <TextView
+            android:id="@+id/disponibilitàprodotto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{product.available ? `Disponibile` : `Non Disponibile`}"
+            android:fontFamily="@font/aclonica"
+            android:textColor="@{product.available ? @color/colorGreen : @color/red}"/>
+
+        <Button
+            android:id="@+id/aggiungicarrello"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:enabled="@{product.available}"
+            android:onClick="@{() -> shopInterface.addItem(product)}"
+            android:text="Ordina"
+            android:fontFamily="@font/aclonica"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="#FFC107" />
+    </LinearLayout>
+</layout>

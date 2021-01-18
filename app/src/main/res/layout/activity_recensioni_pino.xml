@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".RecensioniPino">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="54dp"
+        android:layout_height="53dp"
+        android:onClick="goRecensione2"
+        app:srcCompat="@drawable/home"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:gravity="center"
+        android:text="Lasciami un FeedBack!"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="299dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/pino" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/aclonica"
+        android:text=""
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RatingBar
+            android:id="@+id/ratingBar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#FFC107"
+            android:numStars="5" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="328dp"
+        android:layout_height="93dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:fontFamily="@font/aclonica"
+        android:gravity="start|top"
+        android:hint="Lascia il tuo FeedBack qui.."
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:textColor="#000000"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="208dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Invia FeedBack"
+        android:textColor="#000000"
+        app:backgroundTint="#FFC107" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/instagram" />
+    </LinearLayout>
+
+</LinearLayout>

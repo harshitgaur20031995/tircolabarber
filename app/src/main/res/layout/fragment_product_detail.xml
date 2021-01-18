@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shopViewModel"
+            type="com.example.triolabarberhairstyle.viewmodels.ShopViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".views.ProductDetailFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/productImageView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shampoo_black"
+                android:productImage="@{shopViewModel.product.imageUrl}"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:id="@+id/productNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:text="@{shopViewModel.product.name}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:text="@{String.valueOf(shopViewModel.product.price) + '€'}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shopViewModel.product.available ? `Disponibile` : `Non Disponibile`}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:fontFamily="@font/aclonica"
+                android:textColor="@{shopViewModel.product.available ? @color/colorGreen : @color/red}"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:text="Descrizione Prodotti"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/aclonica"
+                android:text="I prodotti Triola (shampoo e balsamo per capelli, shampoo, balsamo e olio per barba) sono testati stesso all'interno del negozio. Tutti i prodotti MARCHIO TRIOLA sono DERMATOLOGICAMENTE TESTATI"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <Button
+                android:id="@+id/addToCartButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="@{shopViewModel.product.available}"
+                android:fontFamily="@font/aclonica"
+                android:onClick="@{() -> shopViewModel.addItemToCart(shopViewModel.product)}"
+                android:text="Ordina"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                android:textColor="#FFC107" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
+

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "823609008406",
+    "firebase_url": "https://itriolahairstyle.firebaseio.com",
+    "project_id": "itriolahairstyle",
+    "storage_bucket": "itriolahairstyle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823609008406:android:1cbc8a7d9ceb4e9f883037",
+        "android_client_info": {
+          "package_name": "com.example.triolabarberhairstyle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823609008406-1t30pq6r4s0m57uuie9vn5pbnk0phvgb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDMmetlHBxJGA8PsSSn6q1lVTus_N0lTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823609008406-1t30pq6r4s0m57uuie9vn5pbnk0phvgb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
